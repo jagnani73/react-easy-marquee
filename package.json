@@ -1,5 +1,5 @@
 {
-  "name": "react-marquee",
+  "name": "react-easy-marquee",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -7,7 +7,10 @@
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
-  "author": "jagnani73",
+  "author": {
+    "name": "Yashvardhan Jagnani",
+    "email": "yashjagnani73@gmail.com"
+  },
   "license": "MIT",
   "peerDependencies": {
     "react": "^17.0.2",
