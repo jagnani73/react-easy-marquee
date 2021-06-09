@@ -1,11 +1,15 @@
 {
   "name": "react-easy-marquee",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w"
+  },
+  "engines": {
+    "node": ">=12",
+    "npm": ">=6"
   },
   "author": {
     "name": "Yashvardhan Jagnani",
