@@ -1,33 +1,15 @@
 import { AnimationProps } from "./types";
 
-const Animation = ({ reverse }: AnimationProps) => {
+const Animation = ({ reverse, offset }: AnimationProps) => {
   return (
     <style>
       {`
-        @keyframes slideNegative {
+        @keyframes slide${offset} {
           from {
-            transform: translateX(${-1 * 100}%);
+            transform: translateX(${offset * 100}%);
           }
           to {
-            transform: translateX(${(reverse ? -100 : 100) + 100 * -1}%);
-          }
-        }
-
-        @keyframes slideAbsolute {
-          from {
-            transform: translateX(${0 * 100}%);
-          }
-          to {
-            transform: translateX(${(reverse ? -100 : 100) + 100 * 0}%);
-          }
-        }
-
-        @keyframes slidePositive {
-          from {
-            transform: translateX(${1 * 100}%);
-          }
-          to {
-            transform: translateX(${(reverse ? -100 : 100) + 100 * 1}%);
+            transform: translateX(${(reverse ? -100 : 100) + 100 * offset}%);
           }
         }
       `}

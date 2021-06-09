@@ -15,25 +15,19 @@ const Marquee = ({ reverse, duration, children }: Marquee) => {
         height: "360px",
       }}
     >
-      <Animation reverse={reverse} />
-
       {offsetValues.map((offset) => (
         <div
           key={offset}
           style={{
-            animation: `${
-              offset === -1
-                ? `slideNegative`
-                : offset === 0
-                ? `slideAbsolute`
-                : `slidePositive`
-            } ${duration}ms linear infinite`,
+            animation: `slide${offset} ${duration}ms linear infinite`,
             display: "inline-block",
             whiteSpace: "nowrap",
             overflow: "hidden",
             position: "absolute",
           }}
         >
+          <Animation reverse={reverse} offset={offset} />
+
           <section
             style={{
               whiteSpace: "nowrap",
