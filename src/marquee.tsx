@@ -1,7 +1,7 @@
-import { MarqueeProps as Marquee } from "./types";
+import { MarqueeProps } from "./types";
 import { Animation } from "./";
 
-const Marquee = ({ reverse, duration, children }: Marquee) => {
+const Marquee = ({ reverse, duration, children }: MarqueeProps) => {
   const offsetValues: [-1, 0, 1] = [-1, 0, 1];
 
   return (
