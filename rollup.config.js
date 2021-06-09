@@ -1,10 +1,9 @@
 import typescript from "rollup-plugin-typescript2";
-import postcss from "rollup-plugin-postcss";
 
 import pkg from "./package.json";
 
 export default {
-  input: "src/index.tsx",
+  input: "src/marquee.tsx",
   output: [
     {
       file: pkg.main,
@@ -14,11 +13,6 @@ export default {
       strict: false,
     },
   ],
-  plugins: [
-    typescript(),
-    postcss({
-      plugins: [],
-    }),
-  ],
+  plugins: [typescript()],
   external: ["react", "react-dom"],
 };
