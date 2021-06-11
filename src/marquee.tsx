@@ -1,46 +1,65 @@
+import { Fragment } from "react";
+
 import { MarqueeProps } from "./types";
 import { Animation } from "./";
 
-const Marquee = ({ reverse, duration, children }: MarqueeProps) => {
+const Marquee = ({
+  axis,
+  reverse,
+  align,
+  background,
+  duration,
+  height,
+  width,
+  children,
+}: MarqueeProps) => {
   const offsetValues: [-1, 0, 1] = [-1, 0, 1];
 
   return (
     <div
       style={{
         display: "flex",
-        alignItems: "center",
-        width: "100%",
         overflow: "hidden",
         position: "relative",
-        height: "360px",
+        backgroundColor: background || "transparent",
+        height: height || "5rem",
+        width: width || "100%",
       }}
     >
       {offsetValues.map((offset) => (
-        <div
-          key={offset}
-          style={{
-            animation: `slide${offset} ${duration}ms linear infinite`,
-            display: "inline-block",
-            whiteSpace: "nowrap",
-            overflow: "hidden",
-            position: "absolute",
-          }}
-        >
-          <Animation reverse={reverse} offset={offset} />
+        <>
+          <Animation reverse={reverse} offset={offset} axis={axis} />
 
-          <section
+          <div
             style={{
-              whiteSpace: "nowrap",
-              overflow: "hidden",
+              width: "100%",
+              height: "100%",
+              position: "absolute",
               display: "flex",
-              flexDirection: reverse ? "row" : "row-reverse",
+              overflow: "hidden",
+              justifyContent: "space-around",
+              animation: `slide${offset} ${duration || 5000}ms linear infinite`,
+              flexDirection:
+                axis === "X"
+                  ? reverse
+                    ? "row-reverse"
+                    : "row"
+                  : axis === "Y"
+                  ? reverse
+                    ? "column-reverse"
+                    : "column"
+                  : "row",
+              alignItems:
+                align === "end" || align === "start"
+                  ? `flex-${align}`
+                  : "center",
             }}
           >
             {children.map((node, index) => (
-              <span key={index}>{node}</span>
+              <Fragment key={index}>{node}</Fragment>
             ))}
-          </section>
-        </div>
+          </div>
+        </>
       ))}
     </div>
   );
