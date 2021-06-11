@@ -11,7 +11,10 @@ jobs:
       - name: Checkout to different Branch
         uses: actions/checkout@v2
       - name: Read package.json
-        id: package-json-endpoint
-        uses: dutscher/read-package-json-endpoint-actions@v1.3.37
+        id: package-version
+        uses: notiz-dev/github-action-json-property@release
+        with:
+          path: "package.json"
+          prop_path: "version"
       - name: Show version number
-        run: echo "${{ steps.package-json-endpoint.outputs.endpoint }}"
+        run: echo "${{ steps.package-version.outputs.prop }}"
