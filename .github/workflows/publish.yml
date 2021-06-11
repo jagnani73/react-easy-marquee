@@ -1,7 +1,5 @@
 name: Publish to NPM Registry
-on:
-  release:
-    types: [published, created]
+on: release
 jobs:
   build:
     runs-on: ubuntu-latest
