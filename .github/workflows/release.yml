@@ -16,5 +16,11 @@ jobs:
         with:
           path: "package.json"
           prop_path: "version"
-      - name: Show version number
+      - name: Release to NPM Registry
+        uses: ncipollo/release-action@v1
         run: echo "${{ steps.package-version.outputs.prop }}"
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Under-development - v${{ steps.package-version.outputs.prop }}
+          body: This is a release for v${{ steps.package-version.outputs.prop }}. Still under development.
+          prerelease: true

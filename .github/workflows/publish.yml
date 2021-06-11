@@ -1,19 +1,22 @@
-# name: Publish to NPM Registry
-# on:
-#   release:
-#     types: [published]
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#        name: Checkout to different Branch
-#       - uses: actions/checkout@v2
-#       - uses: actions/setup-node@v2
-#         with:
-#           node-version: 12
-#           registry-url: https://registry.npmjs.org/
-#       - run: yarn install
-#       - run: yarn build
-#       - run: npm publish --access public
-#         env:
-#           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+name: Publish to NPM Registry
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to different Branch
+        uses: actions/checkout@v2
+      - name: Setup Node Server
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - name: Publish to NPM
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+        run: |
+          yarn install
+          yarn build
+          npm publish --access public
