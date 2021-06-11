@@ -1,0 +1,17 @@
+name: Create a New Release
+on:
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    name: New Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout to different Branch
+        uses: actions/checkout@v2
+      - name: Read package.json
+        id: package-json-endpoint
+        uses: dutscher/read-package-json-endpoint-actions@v1.33.7
+      - name: Show version number
+        run: echo "${{ steps.package-json-endpoint.outputs.endpoint }}"
