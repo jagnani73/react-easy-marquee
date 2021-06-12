@@ -23,4 +23,4 @@ jobs:
           tag: v${{ steps.package-version.outputs.prop }}
           name: Under-development - v${{ steps.package-version.outputs.prop }}
           body: This is a release for v${{ steps.package-version.outputs.prop }}. Still under development.
-          prerelease: true
+          prerelease: false
