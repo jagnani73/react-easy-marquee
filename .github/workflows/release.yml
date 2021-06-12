@@ -21,6 +21,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: v${{ steps.package-version.outputs.prop }}
-          name: Under-development - v${{ steps.package-version.outputs.prop }}
-          body: This is a release for v${{ steps.package-version.outputs.prop }}. Still under development.
-          prerelease: true
+          name: v${{ steps.package-version.outputs.prop }}
+          body: This is a release for v${{ steps.package-version.outputs.prop }}. Ready to use.
+          prerelease: false
