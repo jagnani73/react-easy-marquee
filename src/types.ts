@@ -9,6 +9,7 @@ export interface MarqueeProps extends AnimationProps {
   background?: string;
   duration?: number;
   height?: string | number;
+  pauseOnHover: boolean;
   width?: string | number;
   children: React.ReactNodeArray;
 }

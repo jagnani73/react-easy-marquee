@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 
 import { MarqueeProps } from "./types";
 import { Animation } from "./";
@@ -10,13 +10,18 @@ const Marquee = ({
   background,
   duration,
   height,
+  pauseOnHover,
   width,
   children,
 }: MarqueeProps) => {
+  const [animate, setAnimate] = useState<"running" | "paused">("running");
+
   const offsetValues: [-1, 0, 1] = [-1, 0, 1];
 
   return (
     <div
+      onMouseEnter={() => pauseOnHover && setAnimate("paused")}
+      onMouseLeave={() => pauseOnHover && setAnimate("running")}
       style={{
         display: "flex",
         overflow: "hidden",
@@ -39,6 +44,7 @@ const Marquee = ({
               overflow: "hidden",
               justifyContent: "space-around",
               animation: `slide${offset} ${duration || 5000}ms linear infinite`,
+              animationPlayState: animate || "running",
               flexDirection:
                 axis === "X"
                   ? reverse
