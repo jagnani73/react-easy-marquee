@@ -8,8 +8,8 @@ export interface MarqueeProps extends AnimationProps {
   align?: "start" | "end";
   background?: string;
   duration?: number;
-  height?: string | number;
+  height?: string;
   pauseOnHover: boolean;
-  width?: string | number;
-  children: React.ReactNodeArray;
+  width?: string;
+  children: JSX.Element;
 }
