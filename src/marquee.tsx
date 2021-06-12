@@ -1,4 +1,4 @@
-import { Fragment, useState } from "react";
+import { useState } from "react";
 
 import { MarqueeProps } from "./types";
 import { Animation } from "./";
@@ -61,9 +61,7 @@ const Marquee = ({
                   : "center",
             }}
           >
-            {children.map((node, index) => (
-              <Fragment key={index}>{node}</Fragment>
-            ))}
+            {children}
           </div>
         </>
       ))}
