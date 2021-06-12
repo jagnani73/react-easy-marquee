@@ -15,6 +15,7 @@
     "noImplicitThis": true,
     "resolveJsonModule": true,
     "sourceMap": true,
+    "declaration": true,
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "strictNullChecks": true,
@@ -22,8 +23,7 @@
     "skipLibCheck": true,
     "strict": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "esModuleInterop": true
+    "noUnusedParameters": true
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "example", "*.config.js"]

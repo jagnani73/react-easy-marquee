@@ -1,11 +1,11 @@
-import typescript from "@rollup/plugin-typescript";
+import typescript from "rollup-plugin-typescript2";
 import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 
 import pkg from "./package.json";
 
 export default {
-  input: "src/marquee.tsx",
+  input: "src/index.tsx",
   output: [
     {
       file: pkg.main,
