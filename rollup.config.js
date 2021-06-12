@@ -1,4 +1,6 @@
-import typescript from "rollup-plugin-typescript2";
+import typescript from "@rollup/plugin-typescript";
+import commonjs from "@rollup/plugin-commonjs";
+import resolve from "@rollup/plugin-node-resolve";
 
 import pkg from "./package.json";
 
@@ -10,9 +12,14 @@ export default {
       format: "cjs",
       exports: "named",
       sourcemap: true,
-      strict: false,
+    },
+    {
+      file: pkg.module,
+      format: "es",
+      exports: "named",
+      sourcemap: true,
     },
   ],
-  plugins: [typescript()],
-  external: ["react", "react-dom"],
+  plugins: [resolve(), typescript(), commonjs({ extensions: [".js", ".ts"] })],
+  external: ["react"],
 };
