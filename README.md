@@ -35,6 +35,8 @@ yarn add react-easy-marquee
 
 ## 📦 Example
 
+A [demo](https:github.io/reacy-easy-marqueee) is worth a thousand words!
+
 ```tsx
 import Marquee from "react-easy-marquee";
 
@@ -66,6 +68,7 @@ export default Example;
 |    Children    |                          Component that should animate                          |   JSX Element    |  `true`  |      N/A      |                             N/A                              |
 |   ClassName    |                          Extra classes for the marquee                          |      string      | `false`  |      N/A      |                             N/A                              |
 |    Duration    | Duration for a loop to run in `ms`<br/>**NOTE**: It changes with the `children` |      number      | `false`  |     5000      |                      `duration={5000}`                       |
+|    Reverse     |                            Direction of the marquee                             |     boolean      | `false`  |     false     |                      `reverse={false}`                       |
 |   Background   |     Background color of the marquee<br/>Accepts any color format as string      |      string      | `false`  | "transparent" | `background="#fafafa"`<br/>`background="RGB(250, 250, 250)"` |
 |     Height     |                              Height of the marquee                              |      string      | `false`  |    "5rem"     |                       `height="5rem"`                        |
 |     Width      |                              Width of the marquee                               |      string      | `false`  |    "100%"     |                        `width="100%"`                        |

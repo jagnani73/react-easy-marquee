@@ -28,7 +28,9 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev-example": "cd example/ && yarn start",
+    "dev": "rollup -c -w",
+    "build-example": "cd example/ && yarn build"
   },
   "peerDependencies": {
     "react": "^17.0.2"
