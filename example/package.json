@@ -1,0 +1,41 @@
+{
+  "name": "react-easy-marquee-example",
+  "version": "1.0.0",
+  "homepage": "https://jagnani73.github.io/react-easy-marquee",
+  "dependencies": {
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react",
+    "react-scripts": "4.0.3",
+    "react-easy-marquee": "link:.."
+  },
+  "license": "MIT",
+  "keywords": [
+    "react",
+    "reactjs",
+    "marquee",
+    "css",
+    "typescript"
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
