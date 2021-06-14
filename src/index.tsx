@@ -12,6 +12,7 @@ const Marquee = ({
   height,
   pauseOnHover,
   width,
+  className,
   children,
 }: MarqueeProps) => {
   const [animate, setAnimate] = useState<"running" | "paused">("running");
@@ -20,6 +21,7 @@ const Marquee = ({
 
   return (
     <div
+      className={className}
       onMouseEnter={() => pauseOnHover && setAnimate("paused")}
       onMouseLeave={() => pauseOnHover && setAnimate("running")}
       style={{
@@ -32,7 +34,7 @@ const Marquee = ({
       }}
     >
       {offsetValues.map((offset) => (
-        <>
+        <div key={offset}>
           <Animation reverse={reverse} offset={offset} axis={axis} />
 
           <div
@@ -63,7 +65,7 @@ const Marquee = ({
           >
             {children}
           </div>
-        </>
+        </div>
       ))}
     </div>
   );
