@@ -35,7 +35,7 @@ yarn add react-easy-marquee
 
 ## 📦 Example
 
-A [demo](https:github.io/reacy-easy-marqueee) is worth a thousand words!
+A [demo](https://jagnani73.github.io/react-easy-marquee/) is worth a thousand words!
 
 ```tsx
 import Marquee from "react-easy-marquee";
