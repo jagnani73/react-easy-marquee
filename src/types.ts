@@ -9,7 +9,7 @@ export interface MarqueeProps extends AnimationProps {
   background?: string;
   duration?: number;
   height?: string;
-  pauseOnHover: boolean;
+  pauseOnHover?: boolean;
   width?: string;
   className?: string;
   children: JSX.Element;

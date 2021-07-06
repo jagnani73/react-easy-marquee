@@ -14,7 +14,7 @@ const Marquee = ({
   width,
   className,
   children,
-}: MarqueeProps) => {
+}: Omit<MarqueeProps, "offset">) => {
   const [animate, setAnimate] = useState<"running" | "paused">("running");
 
   const offsetValues: [-1, 0, 1] = [-1, 0, 1];
