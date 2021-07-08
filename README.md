@@ -66,7 +66,7 @@ export default Example;
 |      Name      |                                   Description                                   |   Type/Values    | Required |    Default    |                           Example                            |
 | :------------: | :-----------------------------------------------------------------------------: | :--------------: | :------: | :-----------: | :----------------------------------------------------------: |
 |    Children    |                          Component that should animate                          |   JSX Element    |  `true`  |      N/A      |                             N/A                              |
-|   ClassName    |                          Extra classes for the marquee                          |      string      | `false`  |      N/A      |                             N/A                              |
+|   Class Name   |                          Extra classes for the marquee                          |      string      | `false`  |      N/A      |                             N/A                              |
 |    Duration    | Duration for a loop to run in `ms`<br/>**NOTE**: It changes with the `children` |      number      | `false`  |     5000      |                      `duration={5000}`                       |
 |    Reverse     |                            Direction of the marquee                             |     boolean      | `false`  |     false     |                      `reverse={false}`                       |
 |   Background   |     Background color of the marquee<br/>Accepts any color format as string      |      string      | `false`  | "transparent" | `background="#fafafa"`<br/>`background="RGB(250, 250, 250)"` |

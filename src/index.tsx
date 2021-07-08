@@ -27,6 +27,7 @@ const Marquee = ({
       style={{
         display: "flex",
         overflow: "hidden",
+        alignItems: "center",
         position: "relative",
         backgroundColor: background || "transparent",
         height: height || "5rem",
@@ -34,14 +35,25 @@ const Marquee = ({
       }}
     >
       {offsetValues.map((offset) => (
-        <div key={offset}>
+        <section
+          key={offset}
+          style={{
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            position: "absolute",
+            alignItems: "center",
+            display: "flex",
+            minWidth: "100%",
+            minHeight: "100%",
+          }}
+        >
           <Animation reverse={reverse} offset={offset} axis={axis} />
 
           <div
             style={{
               width: "100%",
               height: "100%",
-              position: "absolute",
+              whiteSpace: "nowrap",
               display: "flex",
               overflow: "hidden",
               justifyContent: "space-around",
@@ -65,7 +77,7 @@ const Marquee = ({
           >
             {children}
           </div>
-        </div>
+        </section>
       ))}
     </div>
   );
