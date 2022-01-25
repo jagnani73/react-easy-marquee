@@ -1,3 +1,4 @@
+import React from "react";
 import { AnimationProps } from "./animation";
 
 export interface MarqueeProps extends AnimationProps {
@@ -8,5 +9,5 @@ export interface MarqueeProps extends AnimationProps {
   pauseOnHover?: boolean;
   width?: string;
   className?: string;
-  children: JSX.Element[];
+  children: React.ReactChild[];
 }
