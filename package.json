@@ -23,7 +23,7 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=12",
+    "node": ">=14",
     "npm": ">=6"
   },
   "scripts": {
