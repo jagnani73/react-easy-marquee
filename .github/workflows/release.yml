@@ -1,8 +1,7 @@
 name: Create a New Release
 on:
-  push:
-    branches:
-      - main
+  release:
+    types: [published]
 jobs:
   release:
     name: New Release
