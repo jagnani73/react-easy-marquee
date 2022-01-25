@@ -1,9 +1,11 @@
 name: Create a New Release
 on:
-  release:
-    types: [published]
+  workflow_run:
+    workflows: ["Publish to NPM Registry"]
+    types: [completed]
 jobs:
   release:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     name: New Release
     runs-on: ubuntu-latest
     steps:
