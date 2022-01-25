@@ -1,21 +1,15 @@
 {
   "files": {
-    "main.css": "/react-easy-marquee/static/css/main.562ee55a.chunk.css",
-    "main.js": "/react-easy-marquee/static/js/main.40337bbc.chunk.js",
-    "main.js.map": "/react-easy-marquee/static/js/main.40337bbc.chunk.js.map",
-    "runtime-main.js": "/react-easy-marquee/static/js/runtime-main.4430fa6e.js",
-    "runtime-main.js.map": "/react-easy-marquee/static/js/runtime-main.4430fa6e.js.map",
-    "static/js/2.9d162b3b.chunk.js": "/react-easy-marquee/static/js/2.9d162b3b.chunk.js",
-    "static/js/2.9d162b3b.chunk.js.map": "/react-easy-marquee/static/js/2.9d162b3b.chunk.js.map",
+    "main.css": "/react-easy-marquee/static/css/main.bb6eb287.css",
+    "main.js": "/react-easy-marquee/static/js/main.be04d35f.js",
+    "static/js/787.f2ca36e0.chunk.js": "/react-easy-marquee/static/js/787.f2ca36e0.chunk.js",
     "index.html": "/react-easy-marquee/index.html",
-    "static/css/main.562ee55a.chunk.css.map": "/react-easy-marquee/static/css/main.562ee55a.chunk.css.map",
-    "static/js/2.9d162b3b.chunk.js.LICENSE.txt": "/react-easy-marquee/static/js/2.9d162b3b.chunk.js.LICENSE.txt",
-    "static/js/main.40337bbc.chunk.js.LICENSE.txt": "/react-easy-marquee/static/js/main.40337bbc.chunk.js.LICENSE.txt"
+    "main.bb6eb287.css.map": "/react-easy-marquee/static/css/main.bb6eb287.css.map",
+    "main.be04d35f.js.map": "/react-easy-marquee/static/js/main.be04d35f.js.map",
+    "787.f2ca36e0.chunk.js.map": "/react-easy-marquee/static/js/787.f2ca36e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.4430fa6e.js",
-    "static/js/2.9d162b3b.chunk.js",
-    "static/css/main.562ee55a.chunk.css",
-    "static/js/main.40337bbc.chunk.js"
+    "static/css/main.bb6eb287.css",
+    "static/js/main.be04d35f.js"
   ]
 }
