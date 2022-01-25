@@ -1,9 +1,9 @@
 import { Fragment, useState } from "react";
 
-import Marquee from "react-easy-marquee";
+import Marquee, { MarqueeProps, Axis, Align } from "react-easy-marquee";
 
 const Example = () => {
-  const [marqueeProps, setMarqueeProps] = useState({
+  const [marqueeProps, setMarqueeProps] = useState<MarqueeProps>({
     duration: 5000,
     background: "#00DEFB",
     height: "220px",
@@ -145,7 +145,10 @@ const Example = () => {
                     name="axis"
                     value={marqueeProps["axis"]}
                     onChange={(e) =>
-                      setMarqueeProps({ ...marqueeProps, axis: e.target.value })
+                      setMarqueeProps({
+                        ...marqueeProps,
+                        axis: e.target.value as Axis,
+                      })
                     }
                   >
                     <option value="X">X</option>
@@ -161,7 +164,7 @@ const Example = () => {
                     onChange={(e) =>
                       setMarqueeProps({
                         ...marqueeProps,
-                        align: e.target.value,
+                        align: e.target.value as Align,
                       })
                     }
                   >

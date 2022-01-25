@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { MarqueeProps } from "./types";
+import { Axis, Align, MarqueeProps, MarqueeComponentProps } from "./types";
 import Animation from "./animation";
 
 const Marquee = ({
@@ -14,7 +14,7 @@ const Marquee = ({
   width,
   className,
   children,
-}: Omit<MarqueeProps, "offset">) => {
+}: MarqueeComponentProps) => {
   const [animate, setAnimate] = useState<"running" | "paused">("running");
 
   const offsetValues: [-1, 0, 1] = [-1, 0, 1];
@@ -29,9 +29,9 @@ const Marquee = ({
         overflow: "hidden",
         alignItems: "center",
         position: "relative",
-        backgroundColor: background || "transparent",
-        height: height || "5rem",
-        width: width || "100%",
+        backgroundColor: background ?? "transparent",
+        height: height ?? "5rem",
+        width: width ?? "100%",
       }}
     >
       {offsetValues.map((offset) => (
@@ -42,8 +42,8 @@ const Marquee = ({
             whiteSpace: "nowrap",
             overflow: "hidden",
             position: "absolute",
-            animation: `slide${offset} ${duration || 5000}ms linear infinite`,
-            animationPlayState: animate || "running",
+            animation: `slide${offset} ${duration ?? 5000}ms linear infinite`,
+            animationPlayState: animate ?? "running",
             minWidth: "100%",
           }}
         >
@@ -67,10 +67,7 @@ const Marquee = ({
                     ? "column-reverse"
                     : "column"
                   : "row",
-              alignItems:
-                align === "end" || align === "start"
-                  ? `flex-${align}`
-                  : "center",
+              alignItems: align === "center" ? "center" : `flex-${align}`,
             }}
           >
             {children}
@@ -82,3 +79,4 @@ const Marquee = ({
 };
 
 export default Marquee;
+export { Marquee, MarqueeProps, Axis, Align };
