@@ -48,8 +48,5 @@
   },
   "files": [
     "dist"
-  ],
-  "dependencies": {
-    "react": "^17.0.2"
-  }
+  ]
 }
