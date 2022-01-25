@@ -35,16 +35,16 @@ const Marquee = ({
       }}
     >
       {offsetValues.map((offset) => (
-        <section
+        <span
           key={offset}
           style={{
+            display: "inline-block",
             whiteSpace: "nowrap",
             overflow: "hidden",
             position: "absolute",
-            alignItems: "center",
-            display: "flex",
+            animation: `slide${offset} ${duration || 5000}ms linear infinite`,
+            animationPlayState: animate || "running",
             minWidth: "100%",
-            minHeight: "100%",
           }}
         >
           <Animation reverse={reverse} offset={offset} axis={axis} />
@@ -57,8 +57,6 @@ const Marquee = ({
               display: "flex",
               overflow: "hidden",
               justifyContent: "space-around",
-              animation: `slide${offset} ${duration || 5000}ms linear infinite`,
-              animationPlayState: animate || "running",
               flexDirection:
                 axis === "X"
                   ? reverse
@@ -77,7 +75,7 @@ const Marquee = ({
           >
             {children}
           </div>
-        </section>
+        </span>
       ))}
     </div>
   );

@@ -14,6 +14,10 @@ const Animation = ({ axis, reverse, offset }: AnimationProps) => {
       }%);
           }
         }
+
+      @media (prefers-reduced-motion) {
+          animation: none;
+      }
       `}
     </style>
   );
