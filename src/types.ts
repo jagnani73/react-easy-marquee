@@ -1,8 +1,4 @@
-export interface AnimationProps {
-  axis?: "X" | "Y";
-  reverse?: boolean;
-  offset: -1 | 0 | 1;
-}
+import { AnimationProps } from "./animation";
 
 export interface MarqueeProps extends AnimationProps {
   align?: "start" | "end";

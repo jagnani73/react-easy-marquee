@@ -1,4 +1,8 @@
-import { AnimationProps } from "./types";
+export interface AnimationProps {
+  axis?: "X" | "Y";
+  reverse?: boolean;
+  offset: -1 | 0 | 1;
+}
 
 const Animation = ({ axis, reverse, offset }: AnimationProps) => {
   return (
