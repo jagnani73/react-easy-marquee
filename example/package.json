@@ -3,10 +3,15 @@
   "version": "1.0.0",
   "homepage": "https://jagnani73.github.io/react-easy-marquee",
   "dependencies": {
+    "@types/node": "^16.11.21",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
     "react": "link:../node_modules/react",
-    "react-dom": "^16.9.0",
+    "react-dom": "^17.0.2",
     "react-easy-marquee": "link:..",
-    "react-scripts": "4.0.3"
+    "react-scripts": "5.0.0",
+    "typescript": "^4.5.5",
+    "web-vitals": "^2.1.4"
   },
   "license": "MIT",
   "keywords": [

@@ -1,6 +1,6 @@
 {
   "name": "react-easy-marquee",
-  "version": "1.1.9",
+  "version": "1.2.0",
   "homepage": "https://jagnani73.github.io/react-easy-marquee",
   "description": "A marquee component for React using CSS.",
   "author": {
@@ -21,9 +21,9 @@
   ],
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "types": "dist/types.d.ts",
+  "types": "dist/index.d.ts",
   "engines": {
-    "node": ">=12",
+    "node": ">=14",
     "npm": ">=6"
   },
   "scripts": {
@@ -48,5 +48,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "react": "^17.0.2"
+  }
 }
