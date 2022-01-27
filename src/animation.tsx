@@ -1,10 +1,10 @@
 import { AnimationProps } from "./types";
 
-const Animation = ({ axis, reverse, offset }: AnimationProps) => {
+const Animation = ({ axis, reverse, offset, id }: AnimationProps) => {
   return (
     <style>
       {`
-        @keyframes slide${offset} {
+        @keyframes m${id}slide${offset} {
           from {
             transform: translate${axis || "X"}(${offset * 100}%);
           }

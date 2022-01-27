@@ -6,6 +6,7 @@ export interface AnimationProps {
   axis?: Axis;
   reverse?: boolean;
   offset: -1 | 0 | 1;
+  id: number;
 }
 
 export interface MarqueeComponentProps extends Omit<AnimationProps, "offset"> {
