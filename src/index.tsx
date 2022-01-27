@@ -18,7 +18,7 @@ const Marquee = ({
   children,
 }: MarqueeComponentProps) => {
   const [animate, setAnimate] = useState<"running" | "paused">("running");
-  const [id, setId] = useState(0)
+  const [id, setId] = useState<number>(0);
   useEffect(() => {
     setId(marqueeCounter);
     marqueeCounter++;
