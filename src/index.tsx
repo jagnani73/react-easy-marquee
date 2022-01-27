@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import { Axis, Align, MarqueeProps, MarqueeComponentProps } from "./types";
 import Animation from "./animation";
+
+let marqueeCounter = 0;
 
 const Marquee = ({
   axis,
@@ -16,7 +18,11 @@ const Marquee = ({
   children,
 }: MarqueeComponentProps) => {
   const [animate, setAnimate] = useState<"running" | "paused">("running");
-
+  const [id, setId] = useState<number>(0);
+  useEffect(() => {
+    setId(marqueeCounter);
+    marqueeCounter++;
+  }, []);
   const offsetValues: [-1, 0, 1] = [-1, 0, 1];
 
   return (
@@ -42,12 +48,17 @@ const Marquee = ({
             whiteSpace: "nowrap",
             overflow: "hidden",
             position: "absolute",
-            animation: `slide${offset} ${duration ?? 5000}ms linear infinite`,
+            animation: `m${id}slide${offset} ${duration ?? 5000}ms linear infinite`,
             animationPlayState: animate ?? "running",
             minWidth: "100%",
           }}
         >
-          <Animation reverse={reverse} offset={offset} axis={axis} />
+          <Animation 
+            reverse={reverse}
+            offset={offset}
+            axis={axis}
+            id={id} 
+          />
 
           <div
             style={{
