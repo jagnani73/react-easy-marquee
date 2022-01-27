@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-easy-marquee/static/css/main.bb6eb287.css",
-    "main.js": "/react-easy-marquee/static/js/main.be04d35f.js",
+    "main.js": "/react-easy-marquee/static/js/main.732cc02f.js",
     "static/js/787.f2ca36e0.chunk.js": "/react-easy-marquee/static/js/787.f2ca36e0.chunk.js",
     "index.html": "/react-easy-marquee/index.html",
     "main.bb6eb287.css.map": "/react-easy-marquee/static/css/main.bb6eb287.css.map",
-    "main.be04d35f.js.map": "/react-easy-marquee/static/js/main.be04d35f.js.map",
+    "main.732cc02f.js.map": "/react-easy-marquee/static/js/main.732cc02f.js.map",
     "787.f2ca36e0.chunk.js.map": "/react-easy-marquee/static/js/787.f2ca36e0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bb6eb287.css",
-    "static/js/main.be04d35f.js"
+    "static/js/main.732cc02f.js"
   ]
 }
