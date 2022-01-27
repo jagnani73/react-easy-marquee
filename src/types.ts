@@ -9,7 +9,7 @@ export interface AnimationProps {
   id: number;
 }
 
-export interface MarqueeComponentProps extends Omit<AnimationProps, "offset"> {
+export interface MarqueeComponentProps extends Omit<AnimationProps, "offset" | "id"> {
   align?: Align;
   background?: string;
   duration?: number;
