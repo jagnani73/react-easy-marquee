@@ -22,13 +22,10 @@ main {
   position: relative;
 }
 
-h1 {
-  margin: 0;
-}
-
 .heading {
+  margin: auto;
+  width: fit-content;
   text-align: center;
-  margin: 0;
   padding-top: 56px;
   display: flex;
   justify-content: center;
@@ -84,48 +81,21 @@ h1 {
 }
 
 .settings {
-  display: flex;
   width: 70%;
-  justify-content: space-evenly;
+}
+
+.settings > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: stretch;
+  margin: 24px auto;
 }
 
-.settings > div,
-.settings > section {
-  width: 30%;
+.settings > div > div {
+  width: 20%;
 }
 
-.settings > section {
-  display: flex;
-  flex-direction: column;
-}
-
-.settings > div > div,
-.settings > section > div {
-  margin: 24px 0px;
-}
-
-.settings > section > div {
-  display: flex;
-  justify-content: space-between;
-}
-
-.settings > section > div > div {
-  width: 45%;
-}
-
-.settings > section > div:last-child {
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 0;
-}
-
-.settings > section > div:last-child > div {
-  width: 100%;
-  display: flex;
-}
-
-.settings > div label,
 .settings label {
   font-weight: bold;
 }
@@ -146,7 +116,7 @@ h1 {
   outline: none;
 }
 
-.settings > section select {
+.settings select {
   background-color: transparent;
   width: 100%;
   padding: 8px 12px;
@@ -158,8 +128,60 @@ h1 {
   outline: none;
 }
 
-.settings > section select option {
+.settings select option {
   background-color: #2f3646;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  margin-top: 10px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #2f3646;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider {
+  background-color: #00e3ab;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #00e3ab;
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 footer {
@@ -199,12 +221,15 @@ footer a {
     width: 90%;
     margin: auto;
   }
-  .settings {
-    flex-direction: column;
-  }
-  .settings > div,
-  .settings > section {
+
+  .settings > div {
     width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .settings > div > div {
+    width: 100%;
+    margin-bottom: 16px;
   }
 }
 

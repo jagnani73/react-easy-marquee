@@ -81,11 +81,72 @@ const Example = () => {
           <div className="settings">
             <div>
               <div>
+                <label htmlFor="height">Height</label>
+                <input
+                  type="text"
+                  name="height"
+                  value={marqueeProps.height}
+                  onChange={(e) =>
+                    setMarqueeProps({ ...marqueeProps, height: e.target.value })
+                  }
+                />
+              </div>
+
+              <div>
+                <label htmlFor="width">Width</label>
+                <input
+                  type="text"
+                  name="width"
+                  value={marqueeProps.width}
+                  onChange={(e) =>
+                    setMarqueeProps({ ...marqueeProps, width: e.target.value })
+                  }
+                />
+              </div>
+
+              <div>
+                <label htmlFor="axis">Axis</label>
+                <select
+                  name="axis"
+                  value={marqueeProps.axis}
+                  onChange={(e) =>
+                    setMarqueeProps({
+                      ...marqueeProps,
+                      axis: e.target.value as Axis,
+                    })
+                  }
+                >
+                  <option value="X">X</option>
+                  <option value="Y">Y</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="align">Align</label>
+                <select
+                  name=""
+                  value={marqueeProps.align}
+                  onChange={(e) =>
+                    setMarqueeProps({
+                      ...marqueeProps,
+                      align: e.target.value as Align,
+                    })
+                  }
+                >
+                  <option value="start">Start</option>
+                  <option value="center">Center</option>
+                  <option value="end">End</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <div>
                 <label htmlFor="duration">Duration</label>
                 <input
                   type="number"
                   name="duration"
-                  value={marqueeProps["duration"]}
+                  value={marqueeProps.duration}
                   onChange={(e) =>
                     setMarqueeProps({
                       ...marqueeProps,
@@ -100,7 +161,7 @@ const Example = () => {
                 <input
                   type="text"
                   name="background"
-                  value={marqueeProps["background"]}
+                  value={marqueeProps.background}
                   onChange={(e) =>
                     setMarqueeProps({
                       ...marqueeProps,
@@ -109,104 +170,43 @@ const Example = () => {
                   }
                 />
               </div>
-            </div>
-
-            <div>
-              <div>
-                <label htmlFor="height">Height</label>
-                <input
-                  type="text"
-                  name="height"
-                  value={marqueeProps["height"]}
-                  onChange={(e) =>
-                    setMarqueeProps({ ...marqueeProps, height: e.target.value })
-                  }
-                />
-              </div>
 
               <div>
-                <label htmlFor="width">Width</label>
-                <input
-                  type="text"
-                  name="width"
-                  value={marqueeProps["width"]}
-                  onChange={(e) =>
-                    setMarqueeProps({ ...marqueeProps, width: e.target.value })
-                  }
-                />
-              </div>
-            </div>
-
-            <section>
-              <div>
-                <div>
-                  <label htmlFor="axis">Axis</label>
-                  <select
-                    name="axis"
-                    value={marqueeProps["axis"]}
-                    onChange={(e) =>
-                      setMarqueeProps({
-                        ...marqueeProps,
-                        axis: e.target.value as Axis,
-                      })
-                    }
-                  >
-                    <option value="X">X</option>
-                    <option value="Y">Y</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="align">Align</label>
-                  <select
-                    name=""
-                    value={marqueeProps["align"]}
-                    onChange={(e) =>
-                      setMarqueeProps({
-                        ...marqueeProps,
-                        align: e.target.value as Align,
-                      })
-                    }
-                  >
-                    <option value="center">Center</option>
-                    <option value="start">Start</option>
-                    <option value="end">End</option>
-                  </select>
-                </div>
-              </div>
-
-              <div>
-                <div>
-                  <label htmlFor="pauseOnHover">Reverse</label>
+                <label>Reverse</label>
+                <label className="switch">
                   <input
                     type="checkbox"
                     name="reverse"
-                    checked={marqueeProps["reverse"]}
+                    checked={marqueeProps.reverse}
                     onChange={(e) =>
                       setMarqueeProps({
                         ...marqueeProps,
-                        reverse: !marqueeProps["reverse"],
+                        reverse: !marqueeProps.reverse,
                       })
                     }
                   />
-                </div>
+                  <span className="slider" />
+                </label>
+              </div>
 
-                <div>
-                  <label htmlFor="pauseOnHover">Pause On Hover</label>
+              <div>
+                <label>Pause on Hover</label>
+                <label className="switch">
                   <input
                     type="checkbox"
                     name="pauseOnHover"
-                    checked={marqueeProps["pauseOnHover"]}
+                    checked={marqueeProps.pauseOnHover}
                     onChange={(e) =>
                       setMarqueeProps({
                         ...marqueeProps,
-                        pauseOnHover: !marqueeProps["pauseOnHover"],
+                        pauseOnHover: !marqueeProps.pauseOnHover,
                       })
                     }
                   />
-                </div>
+                  <span className="slider" />
+                </label>
               </div>
-            </section>
+            </div>
           </div>
         </div>
       </div>
