@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-easy-marquee/static/css/main.d68fbc09.css",
-    "main.js": "/react-easy-marquee/static/js/main.25e92bf7.js",
+    "main.css": "/react-easy-marquee/static/css/main.72e05172.css",
+    "main.js": "/react-easy-marquee/static/js/main.b1b59aff.js",
     "static/js/787.f2ca36e0.chunk.js": "/react-easy-marquee/static/js/787.f2ca36e0.chunk.js",
     "index.html": "/react-easy-marquee/index.html",
-    "main.d68fbc09.css.map": "/react-easy-marquee/static/css/main.d68fbc09.css.map",
-    "main.25e92bf7.js.map": "/react-easy-marquee/static/js/main.25e92bf7.js.map",
+    "main.72e05172.css.map": "/react-easy-marquee/static/css/main.72e05172.css.map",
+    "main.b1b59aff.js.map": "/react-easy-marquee/static/js/main.b1b59aff.js.map",
     "787.f2ca36e0.chunk.js.map": "/react-easy-marquee/static/js/787.f2ca36e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d68fbc09.css",
-    "static/js/main.25e92bf7.js"
+    "static/css/main.72e05172.css",
+    "static/js/main.b1b59aff.js"
   ]
 }
