@@ -52,8 +52,7 @@ const Marquee = ({
             position: "absolute",
             animation: `m${id}slide${offset} ${
               duration ?? 5000
-            }ms linear infinite`,
-            animationPlayState: animate ?? "running",
+            }ms linear infinite ${animate ?? "running"}`,
             minWidth: "100%",
           }}
         >
